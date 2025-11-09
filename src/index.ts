@@ -1,5 +1,5 @@
 import express, { Express } from 'express';
-import studentRouter from './router/studentRouter';
+import studentRouter from './router/employeeRouter';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import path from 'path';

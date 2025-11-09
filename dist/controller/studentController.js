@@ -19,13 +19,13 @@ class StudentController {
     getMainPage(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const student = yield studentService_1.default.getAllStudents();
-                res.render("home", { title: "Student List", student });
+                const students = yield studentService_1.default.getAllStudents();
+                res.render("home", { title: "Student List", students });
             }
             catch (error) {
                 res.status(500).render("home", {
                     title: "Student List",
-                    student: [],
+                    students: [],
                     message: { type: "error", content: "Failed to load students" }
                 });
             }

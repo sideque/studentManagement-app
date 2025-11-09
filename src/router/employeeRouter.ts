@@ -1,0 +1,10 @@
+import express, { Router } from 'express';
+import EmployeeController from '../controller/employeeController';
+const router: Router = express.Router();
+const employeeController = new EmployeeController();
+router.get('/', employeeController.getMainPage);
+router.post('/addEmployee', employeeController.addEmployee);
+router.post('/editEmployee', employeeController.editEmployee);
+router.delete('/delete/:id', employeeController.deleteEmployee);
+router.get('/search/:query', employeeController.searchTerm);
+export default router;
